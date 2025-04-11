@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mclc | Scientific calculator</title>
+        <title>Calc-Z | Scientific calculator</title>
         <meta name="description" content="This is a scientific calculator project that provides advanced mathematical calculations like matrix operations, statistics, and more.">
         <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
@@ -11,72 +11,76 @@
     <body>
         <div id="header"><h1>Header</h1></div>
         <div id="main">
-            <div id="output">hello</div>
+            <div id="output">
+                <div id="inputOutputarea">
+                    <textarea id="inputOutputfield"></textarea>
+                </div>
+            </div>
             <div id="input">
                 <button id="shift"><h3>Shift</h3></button>
                 <button id="alpha"><h3>Alpha</h3></button>
                 <button id="mode"><h3>Mode</h3></button>
-                <button class="func"></button>
-                <button class="func"></button>
-                <button class="func"></button>
-                <button class="func"></button>
-                <button class="func"><h3><i class="ri-functions"></i></h3></button>
-                <button class="func"><h3>d/dx =</h3></button>
-                <button class="func"><h3>INT</h3></button>
+                <button class="func inputbutton"></button>
+                <button class="func inputbutton"></button>
+                <button class="func inputbutton"></button>
+                <button class="func inputbutton"></button>
+                <button class="func inputbutton"><h3><i class="ri-functions"></i></h3></button>
+                <button class="func inputbutton"><h3>d/dx =</h3></button>
+                <button class="func inputbutton"><h3>INT</h3></button>
                 
-                <button class="func"><h3>Abs</h3></button>
-                <button class="func"></button>
+                <button class="func inputbutton"><h3>Abs</h3></button>
+                <button class="func inputbutton"></button>
                 
-                <button class="func"><h3>x!</h3></button>
-                <button class="func"><h3>log</h3></button>
-                <button class="func"><h3>ln</h3></button>
-                <button class="func"><h3>log<sub><i class="ri-checkbox-blank-line"></i></sub><i class="ri-checkbox-blank-line"></i></h3></button>
-                <button class="func"><h3><i class="ri-checkbox-blank-line"></i>/<i class="ri-checkbox-blank-line"></i></h3></button>
-                <button class="func"><h3>e<sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
-                <button class="func"><h3>x<sup>-1</sup></h3></button>
-                <button class="func"><h3>x<sup>2</sup></h3></button>
-                <button class="func"><h3>x<sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
-                <button class="func"><h3><i class="ri-checkbox-blank-line"></i><sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
-                <button class="func"><h3><i class="ri-square-root"></i>x</h3></button>
-                <button class="func"><h3><sup><i class="ri-checkbox-blank-line"></i></sup><i class="ri-square-root"></i><i class="ri-checkbox-blank-line"></i></h3></button>
-                <button class="func"><h3>hyp</h3></button>
-                <button class="func"><h3>sin</h3></button>
-                <button class="func"><h3>cos</h3></button>
-                <button class="func"><h3>tan</h3></button>
-                <button class="func"><h3><sup>n</sup>P<sub>r</sub></h3></button>
-                <button class="func"><h3><sup>n</sup>C<sub>r</sub></h3></button>
-                <button class="func"><h3>(<i class="ri-subtract-fill"></i>)</h3></button>
-                <button class="func"><h3>o,,,</h3></button>
-                <button class="func"><h3>(</h3></button>
-                <button class="func"><h3>)</h3></button>
-                <button class="func"><h3>S<i class="ri-expand-horizontal-s-fill"></i>D</h3></button>
-                <button class="func"><h3><i class="ri-percent-line"></i></h3></button>
+                <button class="func inputbutton"><h3>x!</h3></button>
+                <button class="func inputbutton" data-value="log("><h3>log</h3></button>
+                <button class="func inputbutton" data-value="ln("><h3>ln</h3></button>
+                <button class="func inputbutton"><h3>log<sub><i class="ri-checkbox-blank-line"></i></sub><i class="ri-checkbox-blank-line"></i></h3></button>
+                <button class="func inputbutton"><h3><i class="ri-checkbox-blank-line"></i>/<i class="ri-checkbox-blank-line"></i></h3></button>
+                <button class="func inputbutton"><h3>e<sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
+                <button class="func inputbutton"><h3>x<sup>-1</sup></h3></button>
+                <button class="func inputbutton"><h3>x<sup>2</sup></h3></button>
+                <button class="func inputbutton"><h3>x<sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
+                <button class="func inputbutton"><h3><i class="ri-checkbox-blank-line"></i><sup><i class="ri-checkbox-blank-line"></i></sup></h3></button>
+                <button class="func inputbutton"><h3><i class="ri-square-root"></i>x</h3></button>
+                <button class="func inputbutton"><h3><sup><i class="ri-checkbox-blank-line"></i></sup><i class="ri-square-root"></i><i class="ri-checkbox-blank-line"></i></h3></button>
+                <button class="func inputbutton"><h3>hyp</h3></button>
+                <button class="func inputbutton" data-value="sin("><h3>sin</h3></button>
+                <button class="func inputbutton" data-value="cos("><h3>cos</h3></button>
+                <button class="func inputbutton" data-value="tan("><h3>tan</h3></button>
+                <button class="func inputbutton"><h3><sup>n</sup>P<sub>r</sub></h3></button>
+                <button class="func inputbutton"><h3><sup>n</sup>C<sub>r</sub></h3></button>
+                <button class="func inputbutton"><h3>(<i class="ri-subtract-fill"></i>)</h3></button>
+                <button class="func inputbutton"><h3>o,,,</h3></button>
+                <button class="func inputbutton" data-value="("><h3>(</h3></button>
+                <button class="func inputbutton" data-value=")"><h3>)</h3></button>
+                <button class="func inputbutton"><h3>S<i class="ri-expand-horizontal-s-fill"></i>D</h3></button>
+                <button class="func inputbutton"><h3><i class="ri-percent-line"></i></h3></button>
                 
                 
-                <button class="num" data-key="7"><h2>7</h2></button>
-                <button class="num" data-key="8"><h2>8</h2></button>
-                <button class="num" data-key="9"><h2>9</h2></button>
-                <button class="num"><h2>DEL</h2></button>
-                <button class="num"><h2>AC</h2></button>
-                <button class="num"><h2>M+</h2></button>
-                <button class="num" data-key="4"><h2>4</h2></button>
-                <button class="num" data-key="5"><h2>5</h2></button>
-                <button class="num" data-key="6"><h2>6</h2></button>
-                <button class="num" data-key="*"><h2><i class="ri-close-line"></i></h2></button>
-                <button class="num" data-key="/"><h2><i class="ri-divide-fill"></i></h2></button>
-                <button class="num"><h3>ENG</h3></button>
-                <button class="num" data-key="1"><h2>1</h2></button>
-                <button class="num" data-key="2"><h2>2</h2></button>
-                <button class="num" data-key="3"><h2>3</h2></button>
-                <button class="num" data-key="+"><h2><i class="ri-add-fill"></i></h2></button>
-                <button class="num" data-key="-"><h2><i class="ri-subtract-fill"></i></h2></button>
-                <button class="num"><h3>RCL</h3></button>
-                <button class="num"><h2>.</h2></button>
-                <button class="num"><h2>0</h2></button>
-                <button class="num"><h3><i class="ri-close-line"></i>10<sup>x</sup></h3></button>
-                <button class="num"><h2>Ans</h2></button>
-                <button class="num"><h2><i class="ri-equal-fill"></i></h2></button>
-                <button class="num"><h3>CALC</h3></button>
+                <button class="num inputbutton" data-value="7"><h2>7</h2></button>
+                <button class="num inputbutton" data-value="8"><h2>8</h2></button>
+                <button class="num inputbutton" data-value="9"><h2>9</h2></button>
+                <button class="num inputbutton" data-value="backspace"><h2>DEL</h2></button>
+                <button class="num inputbutton" data-value="delete"><h2>AC</h2></button>
+                <button class="num inputbutton"><h2>M+</h2></button>
+                <button class="num inputbutton" data-value="4"><h2>4</h2></button>
+                <button class="num inputbutton" data-value="5"><h2>5</h2></button>
+                <button class="num inputbutton" data-value="6"><h2>6</h2></button>
+                <button class="num inputbutton" data-value="*"><h2><i class="ri-close-line"></i></h2></button>
+                <button class="num inputbutton" data-value="/"><h2><i class="ri-divide-fill"></i></h2></button>
+                <button class="num inputbutton"><h3>ENG</h3></button>
+                <button class="num inputbutton" data-value="1"><h2>1</h2></button>
+                <button class="num inputbutton" data-value="2"><h2>2</h2></button>
+                <button class="num inputbutton" data-value="3"><h2>3</h2></button>
+                <button class="num inputbutton" data-value="+"><h2><i class="ri-add-fill"></i></h2></button>
+                <button class="num inputbutton" data-value="-"><h2><i class="ri-subtract-fill"></i></h2></button>
+                <button class="num inputbutton"><h3>RCL</h3></button>
+                <button class="num inputbutton" data-value="."><h2>.</h2></button>
+                <button class="num inputbutton" data-value="0"><h2>0</h2></button>
+                <button class="num inputbutton"><h3><i class="ri-close-line"></i>10<sup>x</sup></h3></button>
+                <button class="num inputbutton"><h2>Ans</h2></button>
+                <button class="num inputbutton" data-value="solve"><h2><i class="ri-equal-fill"></i></h2></button>
+                <button class="num inputbutton"><h3>CALC</h3></button>
             </div>
         </div>
         <div id="footer">
