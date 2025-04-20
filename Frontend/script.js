@@ -16,7 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             const value = button.dataset.value; // Get the button's value
             if(button.className === "func") complex = true;
-            if(value === "backspace") inputOutputField.value = inputOutputField.value.slice(0,-1);
+            if(value === "backspace") {
+                let text = inputOutputField.value;
+                const regex = /(sin\(|cos\(|tan\(|log\(|ln\(|sqrt\()$/;
+                if (regex.test(text)) {
+                    text = text.replace(regex, '');
+                } else {
+                    text = text.slice(0, -1);
+                }
+                inputOutputField.value = text;   
+            }
             else if(value === "delete") inputOutputField.value = "";
             else if(value === "solve"){
                 if(complex === false){
